@@ -2,3 +2,19 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+:root{
+    --deafult-font-family: 'Poppins', serif;
+
+    --body-margin: 125px;
+    --link-color: #37E84C;
+}
+a{
+    text-decoration: none;
+    color: var(--link-color);
+}
+body{
+    color: white;
+    background-color: #121212;
+    font-family: var(--deafult-font-family);
+}

@@ -1,0 +1,40 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: var(--body-margin);
+    padding-right: var(--body-margin);
+    padding-top: 13px;
+    padding-bottom: 13px;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+nav ul.menu-items{
+    display: inline-flex;
+    gap: 20px;
+}
+nav ul.menu-items li {
+    list-style-type: none;
+    font-size: 16px;
+}
+nav ul.menu-items li a {
+    color: white;
+    transition: all 0.3s;
+    position: relative;
+
+}
+nav ul.menu-items li a.active, nav ul.menu-items li a:hover {
+    color: var(--link-color);
+}
+nav ul.menu-items li a::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: var(--link-color);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s linear;
+}
+nav ul.menu-items li a:hover:before, nav ul.menu-items li a.active::before{
+    width: 90%;
+}

@@ -1,1 +1,8 @@
-<p>navbar works!</p>
+<nav>
+    <div class="logo"><a [routerLink]="['/']" routerLinkActive="active" >HERE LOGO</a></div>
+    <ul class="menu-items">
+        <li class="menu-item"><a [routerLink]="['/']" routerLinkActive="active" >Home</a></li>
+        <li class="menu-item"><a [routerLink]="['/my-sets']" routerLinkActive="active" >My sets</a></li>
+        <li class="menu-item"><a [routerLink]="['/profile']" routerLinkActive="active" >My account</a></li>
+    </ul>
+</nav>
