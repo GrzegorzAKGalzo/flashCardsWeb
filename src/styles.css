@@ -16,6 +16,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 img{
     max-width: 100%;
 }
+p{
+    font-size: 16px;
+}
 :root{
     --deafult-font-family: 'Poppins', serif;
     --fancy-font-family: 'Just Another Hand', serif;
@@ -107,12 +110,24 @@ app-navbar{
 .mb-5{
     margin-bottom: 30px;
 }
-
-
-
-
-
-
+.text-uppercase{
+    text-transform: uppercase;
+}
+.items-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+strong{
+    color: var(--link-color);
+}
+.container .row{
+    padding-bottom: 50px;
+}
+.mt-100{
+    margin-top: 200px !important;
+}
 
 
 

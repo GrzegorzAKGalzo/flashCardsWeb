@@ -1,0 +1,27 @@
+.text-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.text-icon p{
+    padding-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.text-icon mat-icon{
+    transform: scale(3);
+}
+.text-icon.special{
+    color: var(--link-color);
+}
+mat-icon.arrow{
+    text-align: center;
+    transform: scale(3);
+}
+div :has(.arrow){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
