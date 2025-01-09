@@ -1,5 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+
+/* 
+    MOBILE 0 - 480
+    TABLET x - 768
+    PC  
+*/
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
@@ -8,6 +15,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
     --body-margin: 125px;
     --link-color: #37E84C;
+    --bg-color : #121212;
 }
 a{
     text-decoration: none;
@@ -15,6 +23,51 @@ a{
 }
 body{
     color: white;
-    background-color: #121212;
+    background-color: var(--bg-color);
     font-family: var(--deafult-font-family);
+}
+.md-only{
+    display: none;
+}
+.bd-only{
+    display: unset;
+}
+.overlay::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+    z-index: 5;
+    animation: overlayEnter 0.5s linear forwards;
+}
+
+@keyframes overlayEnter {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 0.6;
+    }
+}
+
+
+app-navbar{
+    z-index: 10;
+}
+
+
+@media  only screen and (max-width: 480px) {
+    
+}
+@media  only screen and (max-width: 768px) {
+    .md-only{
+        display: unset;
+    }
+    .bd-only{
+        display: none !important;
+    }
 }

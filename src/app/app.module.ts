@@ -13,6 +13,8 @@ import { ProfileDetailsComponent } from './profile-details/profile-details.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { MatIconModule } from '@angular/material/icon'
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
