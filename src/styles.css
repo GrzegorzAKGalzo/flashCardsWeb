@@ -7,12 +7,18 @@
     TABLET x - 768
     PC  
 */
+*{
+    margin: 0;
+    padding: 0;
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
+img{
+    max-width: 100%;
+}
 :root{
     --deafult-font-family: 'Poppins', serif;
-
+    --fancy-font-family: 'Just Another Hand', serif;
     --body-margin: 125px;
     --link-color: #37E84C;
     --bg-color : #121212;
@@ -53,12 +59,79 @@ body{
         opacity: 0.6;
     }
 }
+.self-end{
+    display: block;
+    justify-self: end;
+}
 
+h1.hero-text{
+    font-weight: 40px;
+}
+h1.hero-text > span{
+    color: var(--link-color);
+}
+.container.hero{
+    padding-top: 90px;
+}
+.fancy-text{
+    font-family: var(--fancy-font-family);
+    font-size: 30px;
+    font-style: italic;
+    letter-spacing: 0.1rem;
+}
 
 app-navbar{
     z-index: 10;
 }
 
+
+.btn{
+    text-transform: capitalize;
+    color: white;
+    font-weight: bold;
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 6px;
+    transition: all 0.1s linear;
+}
+.btn-primary{
+    background-color: var(--link-color);
+    border: 1px solid var(--link-color);
+}
+.btn-primary:hover{
+    background-color: unset;
+    color: var(--link-color);
+}
+.mt-5{
+    margin-top: 30px;
+}
+.mb-5{
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVNES */
 
 @media  only screen and (max-width: 480px) {
     
@@ -71,3 +144,90 @@ app-navbar{
         display: none !important;
     }
 }
+
+.row.align-items-center{
+    align-items: center;
+}
+  /* Container */
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+  }
+  
+  /* Row */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: -10px; /* For consistent spacing */
+  }
+  
+  /* Columns (Default for Desktop) */
+  [class*="col-"] {
+    padding: 10px; /* Matches row margin for consistent spacing */
+    flex: 1;
+    width: 100%; /* Default to full-width */
+    box-sizing: border-box;
+  }
+  
+  .col-1 { flex: 0 0 8.33%; max-width: 8.33%; }
+  .col-2 { flex: 0 0 16.66%; max-width: 16.66%; }
+  .col-3 { flex: 0 0 25%; max-width: 25%; }
+  .col-4 { flex: 0 0 33.33%; max-width: 33.33%; }
+  .col-5 { flex: 0 0 41.66%; max-width: 41.66%; }
+  .col-6 { flex: 0 0 50%; max-width: 50%; }
+  .col-7 { flex: 0 0 58.33%; max-width: 58.33%; }
+  .col-8 { flex: 0 0 66.66%; max-width: 66.66%; }
+  .col-9 { flex: 0 0 75%; max-width: 75%; }
+  .col-10 { flex: 0 0 83.33%; max-width: 83.33%; }
+  .col-11 { flex: 0 0 91.66%; max-width: 91.66%; }
+  .col-12 { flex: 0 0 100%; max-width: 100%; }
+  
+  /* Responsive Breakpoints */
+  /* Mobile (up to 480px) */
+  @media (max-width: 480px) {
+    .col-mobile-1 { flex: 0 0 8.33%; max-width: 8.33%; }
+    .col-mobile-2 { flex: 0 0 16.66%; max-width: 16.66%; }
+    .col-mobile-3 { flex: 0 0 25%; max-width: 25%; }
+    .col-mobile-4 { flex: 0 0 33.33%; max-width: 33.33%; }
+    .col-mobile-5 { flex: 0 0 41.66%; max-width: 41.66%; }
+    .col-mobile-6 { flex: 0 0 50%; max-width: 50%; }
+    .col-mobile-7 { flex: 0 0 58.33%; max-width: 58.33%; }
+    .col-mobile-8 { flex: 0 0 66.66%; max-width: 66.66%; }
+    .col-mobile-9 { flex: 0 0 75%; max-width: 75%; }
+    .col-mobile-10 { flex: 0 0 83.33%; max-width: 83.33%; }
+    .col-mobile-11 { flex: 0 0 91.66%; max-width: 91.66%; }
+    .col-mobile-12 { flex: 0 0 100%; max-width: 100%; }
+    .hero {padding-top: 0 !important;}
+  }
+  
+  /* Tablet (up to 768px) */
+  @media (max-width: 768px) {
+    .col-tablet-1 { flex: 0 0 8.33%; max-width: 8.33%; }
+    .col-tablet-2 { flex: 0 0 16.66%; max-width: 16.66%; }
+    .col-tablet-3 { flex: 0 0 25%; max-width: 25%; }
+    .col-tablet-4 { flex: 0 0 33.33%; max-width: 33.33%; }
+    .col-tablet-5 { flex: 0 0 41.66%; max-width: 41.66%; }
+    .col-tablet-6 { flex: 0 0 50%; max-width: 50%; }
+    .col-tablet-7 { flex: 0 0 58.33%; max-width: 58.33%; }
+    .col-tablet-8 { flex: 0 0 66.66%; max-width: 66.66%; }
+    .col-tablet-9 { flex: 0 0 75%; max-width: 75%; }
+    .col-tablet-10 { flex: 0 0 83.33%; max-width: 83.33%; }
+    .col-tablet-11 { flex: 0 0 91.66%; max-width: 91.66%; }
+    .col-tablet-12 { flex: 0 0 100%; max-width: 100%; }
+  }
+  
+  /* Utility Classes */
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-right {
+    text-align: right;
+  }
+  
+  .text-left {
+    text-align: left;
+  }
+  
