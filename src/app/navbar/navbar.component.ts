@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoggingService } from '../logging.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -12,11 +13,13 @@ export class NavbarComponent {
   public menuMobile:boolean = false;
   private isMobile:boolean = false;
 
+  constructor(public  loginService:LoggingService){}
+
+
+
   public toggleMobileMenu(){
     this.menuMobile = !this.menuMobile;
     const mobileMenuIcon = document.querySelector("#mobileMenuIcon");
-
-
     if (this.menuMobile && mobileMenuIcon){
       mobileMenuIcon.innerHTML = "close";
       document.getElementsByTagName("body")[0].classList.add("overlay");

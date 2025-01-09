@@ -16,6 +16,7 @@ nav ul.menu-items{
     gap: 20px;
 }
 nav ul.menu-items li {
+    align-self: center;
     list-style-type: none;
     font-size: 16px;
 }
@@ -28,7 +29,7 @@ nav ul.menu-items li a {
 nav ul.menu-items li a.active, nav ul.menu-items li a:hover {
     color: var(--link-color);
 }
-nav ul.menu-items li a::before{
+nav ul.menu-items li a:not(.special)::before{
     content: '';
     position: absolute;
     width: 0;
@@ -38,16 +39,35 @@ nav ul.menu-items li a::before{
     left: 0;
     transition: width 0.3s linear;
 }
+
 nav ul.menu-items li a:hover:before, nav ul.menu-items li a.active::before{
     width: 90%;
 }
+.menu-item > .special{
+    color: white;
+    background-color: var(--link-color);
+    border-radius: 6px;
+    text-transform: capitalize;
+    padding: 1rem 2rem 1rem 2rem;
+    box-sizing: border-box;
+    transition: all 0.3s linear;
+    border: 1px solid var(--link-color);
 
+}
+.menu-item > .special:hover, .menu-item > .special.active{
+    background-color: unset;
+    color: var(--link-color);
+}
 
 
 @media  only screen and (max-width: 768px) {
     nav{
         padding-left: 10%;
         padding-right: 10%;
+    }
+    nav ul.menu-items li {
+        align-self: unset;
+        width: fit-content;
     }
     .menu-items{
         flex-direction: column;
