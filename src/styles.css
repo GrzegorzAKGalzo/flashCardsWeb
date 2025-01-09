@@ -185,7 +185,9 @@ strong{
     width: 100%; /* Default to full-width */
     box-sizing: border-box;
   }
-  
+  .hidden-mobile {
+    display: none !important;
+  }
   .col-1 { flex: 0 0 8.33%; max-width: 8.33%; }
   .col-2 { flex: 0 0 16.66%; max-width: 16.66%; }
   .col-3 { flex: 0 0 25%; max-width: 25%; }
@@ -232,7 +234,11 @@ strong{
     .col-tablet-11 { flex: 0 0 91.66%; max-width: 91.66%; }
     .col-tablet-12 { flex: 0 0 100%; max-width: 100%; }
   }
-  
+  @media (min-width: 481px) {
+    .hidden-mobile {
+      display: block !important;
+    }
+  }
   /* Utility Classes */
   .text-center {
     text-align: center;
