@@ -1,1 +1,19 @@
-<p>log-in works!</p>
+<div class="comtainer  mt-100">
+    <div class="row text">
+        <div class="col-12">
+            <div class="login-box">
+            <h2>Log in</h2>
+            <form (ngSubmit)="onSubmit()">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="itsme@gmail.pl">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="very strong Passw0rd 123">
+                <input type="submit" value="LOG IN" class="btn btn-primary">
+            </form>
+            <p class="text-center">
+                <a href="">Create an account</a> / <a href="">Forget a password?</a>
+            </p>
+            </div>
+        </div>
+    </div>
+</div>

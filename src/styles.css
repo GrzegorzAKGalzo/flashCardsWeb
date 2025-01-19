@@ -260,3 +260,6 @@ strong{
   mat-icon.special{
     color: var(--link-color);
   }
+footer .row{
+    padding-bottom: 0 !important;
+ }

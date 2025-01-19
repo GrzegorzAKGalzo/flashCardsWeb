@@ -1,0 +1,27 @@
+.login-box{
+    display: flex;
+    flex-direction: column;
+    max-width: 430px;
+    margin: 0 auto;
+    border: 2px solid white;
+    border-radius: 25px;
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.25);
+    padding: 30px 40px 30px 40px;
+    gap: 50px;
+}
+.login-box form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.login-box form input:not([type="submit"]){
+    background-color: transparent;
+    color: white;
+    border-radius: 15px;
+    padding: 15px 20px 15px 20px;
+    border: 2px solid white;
+    box-shadow: 0 0 5.5px #c1c1c142;
+}
+.login-box form input[type="submit"]{
+    cursor: pointer;
+}
