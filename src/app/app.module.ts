@@ -13,7 +13,8 @@ import { ProfileDetailsComponent } from './profile-details/profile-details.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { MatIconModule } from '@angular/material/icon'
+import { MatIconModule } from '@angular/material/icon';
+import { FooterComponent } from './footer/footer.component'
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { MatIconModule } from '@angular/material/icon'
     ProfileDetailsComponent,
     HomePageComponent,
     NotFoundComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
