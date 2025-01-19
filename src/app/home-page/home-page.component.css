@@ -26,3 +26,15 @@ div :has(.arrow){
     align-items: center;
     text-align: center;
 }
+.text-icon.flex-row{
+    flex-direction: row;
+    gap: 3rem;
+    text-align: left;
+}
+.text-icon p:nth-child(2){
+    font-size: 16px;
+    font-weight: normal;
+}
+.text-icon  .text{
+    width: 80%;
+}

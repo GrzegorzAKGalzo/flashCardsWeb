@@ -86,7 +86,9 @@ h1.hero-text > span{
 app-navbar{
     z-index: 10;
 }
-
+h2{
+    font-size: 2rem;
+}
 
 .btn{
     text-transform: capitalize;
@@ -162,6 +164,9 @@ strong{
 
 .row.align-items-center{
     align-items: center;
+}
+.row.justify-between{
+    justify-content: space-between;
 }
   /* Container */
   .container {
@@ -251,4 +256,6 @@ strong{
   .text-left {
     text-align: left;
   }
-  
+  mat-icon.special{
+    color: var(--link-color);
+  }
